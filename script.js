@@ -1,45 +1,62 @@
-const container = document.getElementById('lista-jogos');
+var container = document.getElementById('lista-jogos');
+var cardAberto = null;
 
-jogos.forEach((jogo, index) => {
-  const card = document.createElement('div');
-  card.classList.add('jogo-card');
-  card.dataset.id = jogo.id;
+for (var i = 0; i < jogos.length; i++) {
+    var jogo = jogos[i];
 
-  card.innerHTML = `
-    <div class="capa-wrapper">
-      <img src="${jogo.imagem}" alt="${jogo.nome}" class="capa-jogo">
-      <span class="score-badge">${jogo.hallScore}</span>
-    </div>
-    <span class="posicao">#${index + 1}</span>
-    <p class="nome">${jogo.nome}</p>
-  `;
+    var card = document.createElement('div');
+    card.className = 'jogo-card';
+    card.setAttribute('data-id', jogo.id);
 
-  container.appendChild(card);
-});
+    card.innerHTML =
+        '<img src="' + jogo.imagem + '" alt="' + jogo.nome + '" class="capa-jogo">' +
+        '<span class="score">' + jogo.hallScore + '</span>' +
+        '<span class="posicao">#' + (i + 1) + '</span>' +
+        '<p class="nome">' + jogo.nome + '</p>';
 
-container.addEventListener('click', (evento) => {
-  const card = evento.target.closest('.jogo-card');
-  if (!card) return;
+    card.addEventListener('click', function () {
+        abrirJogo(this);
+    });
 
-  const id = Number(card.dataset.id);
-  const jogo = jogos.find(j => j.id === id);
+    container.appendChild(card);
+}
 
-  const jaAberto = card.classList.contains('expandido');
+function abrirJogo(card) {
+    var id = Number(card.getAttribute('data-id'));
 
-  document.querySelectorAll('.jogo-card.expandido').forEach(c => {
-    c.classList.remove('expandido');
-    c.querySelector('.info-extra')?.remove();
-  });
+    // se já tinha um card aberto, fecha ele primeiro
+    if (cardAberto !== null) {
+        var infoAntiga = cardAberto.querySelector('.info-extra');
+        if (infoAntiga !== null) {
+            cardAberto.removeChild(infoAntiga);
+        }
+        cardAberto.classList.remove('expandido');
 
-  if (!jaAberto) {
+        var idAntigo = Number(cardAberto.getAttribute('data-id'));
+
+        // se clicou de novo no mesmo card, só fecha e para por aqui
+        if (idAntigo === id) {
+            cardAberto = null;
+            return;
+        }
+    }
+
+    // procura o jogo clicado dentro do array
+    var jogo = null;
+    for (var i = 0; i < jogos.length; i++) {
+        if (jogos[i].id === id) {
+            jogo = jogos[i];
+        }
+    }
+
     card.classList.add('expandido');
 
-    const infoExtra = document.createElement('div');
-    infoExtra.classList.add('info-extra');
-    infoExtra.innerHTML = `
-      <p class="meta">${jogo.ano} · ${jogo.plataforma}</p>
-      <p>${jogo.sobre}</p>
-    `;
+    var infoExtra = document.createElement('div');
+    infoExtra.className = 'info-extra';
+    infoExtra.innerHTML =
+        '<p class="meta">' + jogo.ano + ' · ' + jogo.plataforma + '</p>' +
+        '<p>' + jogo.sobre + '</p>';
+
     card.appendChild(infoExtra);
-  }
-});
+    cardAberto = card;
+}

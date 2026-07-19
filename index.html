@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameHall</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="cabecalho">
-        <div class="logo"><img src="/assets/gamehall-logo2.png" alt="logo gamehall"></div>
+        <div class="logo"><img src="assets/gamehall_logo.png" alt="logo gamehall"></div>
         <nav class="navegacao">
             <a href="#">Sobre</a>
             <a href="#">Contato</a>
@@ -16,16 +18,57 @@
     </header>
 
     <section class="hero-texto">
-    <h1>Descubra o que jogar</h1>
-    <p>Dos clássicos que definiram gerações aos títulos modernos mais aclamados, conheça os jogos que conquistaram espaço na Pablo's GameHall. Um ranking baseado em críticas e nas minhas experiências como jogador.</p>
+        <h1>Descubra o que jogar</h1>
+        <p>Seja para revisitar um clássico ou conhecer um novo favorito, a GameHall reúne títulos que conquistaram
+            jogadores e críticos ao redor do mundo. Explore nosso Hall da Fama e descubra por que esses jogos se
+            tornaram referências na indústria.</p>
     </section>
 
     <div class="container-principal">
         <section class="lista-jogos" id="lista-jogos"></section>
-        <aside class="curiosidades"></aside>
+        <aside class="curiosidades">
+            <div class="bloco-info">
+                <h3>Sobre o ranking</h3>
+
+                <p>
+                    O ranking foi montado a partir das opiniões da equipe GameHall, formada por
+                    colegas da faculdade e do trabalho. Também levamos em consideração as
+                    avaliações da crítica especializada para organizar a lista.
+                </p>
+
+                <h4>Equipe GameHall</h4>
+
+                <ul class="lista-criticos">
+                    <li>@Pablobastos__</li>
+                    <li>@Hoshigaki</li>
+                    <li>@Darkgui</li>
+                    <li>@rangelleivy</li>
+                    <li>@joaokijing7</li>
+                </ul>
+            </div>
+
+            <div class="bloco-info">
+                <h3>Curiosidades</h3>
+
+                <ul class="lista-stats">
+                    <li>🎮 Jogos no ranking: 20</li>
+                    <li>📅 Período dos lançamentos: 1990–2023</li>
+                    <li>📆 Década mais representada: Anos 1990</li>
+                    <li>🎭 Gênero mais presente: RPG</li>
+                    <li>⭐ Hall Score médio: 97,1/100</li>
+                    <li>🧟 Franquia com mais representantes: Resident Evil (4)</li>
+                    <li>🏢 Empresa mais presente: Nintendo (4)</li>
+                    <li>🕹️ Plataforma mais representada: PlayStation</li>
+                    <li>🏆 Maior Hall Score: 100</li>
+                    <li>⌛ Jogo mais antigo: Super Mario World (1990)</li>
+                    <li>🚀 Jogo mais recente: Resident Evil 4 Remake e Baldur's Gate 3 (2023)</li>
+                </ul>
+            </div>
+        </aside>
     </div>
 
     <script src="jogos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
