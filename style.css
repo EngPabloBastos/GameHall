@@ -1,3 +1,17 @@
+
+/*Cores do projeto*/
+:root {
+    --cor-fundo: #0d0d0d;
+    --cor-fundo-card: #141414;
+    --cor-texto: #eaeaea;
+    --cor-texto-secundario: #999;
+    --cor-texto-terciario: #ccc;
+    --cor-principal: #c0392b;
+    --cor-principal-hover: #a3301f;
+    --cor-borda: #2a2a2a;
+    --cor-verde: #27ae60;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,22 +20,22 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
-    background-color: #0d0d0d;
-    color: #eaeaea;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
-/* CABEÇALHO */
+/* Header */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1px 35px;
-    background-color: #141414;
-    border-bottom: 4px solid #c0392b;
+    padding: 20px 35px;
+    background-color: var(--cor-fundo-card);
+    border-bottom: 4px solid var(--cor-principal);
 }
 
 .logo img {
-    height: 100px;
+    height: 60px;
     width: auto;
 }
 
@@ -32,15 +46,15 @@ body {
 
 .navegacao a {
     text-decoration: none;
-    color: #eaeaea;
+    color: var(--cor-texto);
     font-size: 15px;
 }
 
 .navegacao a:hover {
-    color: #c0392b;
+    color: var(--cor-principal);
 }
 
-/* TEXTO DE INTRODUÇÃO */
+/* Texto acima do ranking */
 .hero-texto {
     max-width: 700px;
     margin: 0 auto;
@@ -54,11 +68,11 @@ body {
 }
 
 .hero-texto p {
-    color: #999;
+    color: var(--cor-texto-secundario);
     font-size: 16px;
 }
 
-/* LAYOUT PRINCIPAL */
+/* container */
 .container-principal {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -66,7 +80,7 @@ body {
     padding: 20px;
 }
 
-/* GRADE DE JOGOS */
+/* grade dos jogos(ranking) */
 .lista-jogos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -76,18 +90,18 @@ body {
 
 .jogo-card {
     cursor: pointer;
-    background-color: #141414;
+    background-color: var(--cor-fundo-card);
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #2a2a2a;
+    border: 1px solid var(--cor-borda);
 }
 
 .jogo-card:hover {
-    border-color: #c0392b;
+    border-color: var(--cor-principal);
 }
 
 .jogo-card.expandido {
-    border-color: #c0392b;
+    border-color: var(--cor-principal);
     background-color: #1a1414;
 }
 
@@ -102,7 +116,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #27ae60;
+    background-color: var(--cor-verde);
     color: #fff;
     font-size: 13px;
     font-weight: bold;
@@ -113,7 +127,7 @@ body {
 }
 
 .posicao {
-    color: #c0392b;
+    color: var(--cor-principal);
     font-size: 14px;
     font-weight: bold;
     margin-left: 8px;
@@ -131,18 +145,18 @@ body {
 }
 
 .info-extra .meta {
-    color: #c0392b;
+    color: var(--cor-principal);
     font-size: 13px;
     margin-bottom: 8px;
 }
 
 .info-extra p:last-child {
-    color: #ccc;
+    color: var(--cor-texto-terciario);
 }
 
-/* MENU LATERAL */
+/* menu lateral */
 .curiosidades {
-    background-color: #141414;
+    background-color: var(--cor-fundo-card);
     padding: 20px;
     border-radius: 8px;
     position: sticky;
@@ -151,7 +165,7 @@ body {
 }
 
 .curiosidades h3 {
-    border-bottom: 2px solid #c0392b;
+    border-bottom: 2px solid var(--cor-principal);
     padding-bottom: 8px;
     margin-bottom: 12px;
     font-size: 17px;
@@ -164,7 +178,7 @@ body {
 }
 
 .curiosidades p {
-    color: #ccc;
+    color: var(--cor-texto-terciario);
     font-size: 14px;
 }
 
@@ -176,30 +190,23 @@ body {
 
 .lista-criticos li {
     font-size: 14px;
-    color: #ccc;
+    color: var(--cor-texto-terciario);
     margin-bottom: 6px;
 }
 
 .lista-stats li {
     font-size: 14px;
-    color: #ccc;
-    border-bottom: 1px solid #2a2a2a;
+    color: var(--cor-texto-terciario);
+    border-bottom: 1px solid var(--cor-borda);
     padding-bottom: 8px;
     margin-bottom: 8px;
-}
-
-.lista-stats li span {
-    display: block;
-    color: #c0392b;
-    font-size: 12px;
-    margin-bottom: 3px;
 }
 
 .bloco-info {
     margin-bottom: 24px;
 }
 
-/* FORMULÁRIO DE CONTATO */
+/* Formulário de contato + Viacep */
 .contato {
     max-width: 500px;
     margin: 0 auto;
@@ -212,7 +219,7 @@ body {
 }
 
 .contato p {
-    color: #999;
+    color: var(--cor-texto-secundario);
     margin-bottom: 20px;
 }
 
@@ -224,22 +231,22 @@ body {
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
-    color: #ccc;
+    color: var(--cor-texto-terciario);
 }
 
 .campo input,
 .campo textarea {
     width: 100%;
     padding: 8px;
-    background-color: #141414;
-    border: 1px solid #2a2a2a;
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
     border-radius: 6px;
-    color: #eaeaea;
+    color: var(--cor-texto);
     font-family: inherit;
 }
 
 .contato button {
-    background-color: #c0392b;
+    background-color: var(--cor-principal);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -249,7 +256,7 @@ body {
 }
 
 .contato button:hover {
-    background-color: #a3301f;
+    background-color: var(--cor-principal-hover);
 }
 
 .confirmacao {
@@ -259,7 +266,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #050505;
+    background-color: rgba(0, 0, 0, 0.75);
     justify-content: center;
     align-items: center;
 }
@@ -269,8 +276,8 @@ body {
 }
 
 .confirmacao .caixa {
-    background-color: #141414;
-    border: 2px solid #c0392b;
+    background-color: var(--cor-fundo-card);
+    border: 2px solid var(--cor-principal);
     border-radius: 8px;
     padding: 30px;
     text-align: center;
@@ -283,12 +290,12 @@ body {
 }
 
 .confirmacao p {
-    color: #999;
+    color: var(--cor-texto-secundario);
     margin-bottom: 15px;
 }
 
 .confirmacao button {
-    background-color: #c0392b;
+    background-color: var(--cor-principal);
     color: #fff;
     border: none;
     padding: 8px 20px;
@@ -296,16 +303,16 @@ body {
     cursor: pointer;
 }
 
-/* RODAPÉ */
+/* Footer */
 .rodape {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 35px;
-    border: 2px solid #c0392b;
+    border: 2px solid var(--cor-principal);
     border-radius: 8px;
     margin: 20px;
-    color: #999;
+    color: var(--cor-texto-secundario);
     font-size: 14px;
 }
 
@@ -332,7 +339,7 @@ body {
 }
 
 .sobre p {
-    color: #ccc;
+    color: var(--cor-texto-terciario);
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -348,7 +355,7 @@ body {
     height: 26px;
 }
 
-/* RESPONSIVO */
+/* Responsividade */
 @media (max-width: 768px) {
     .container-principal {
         grid-template-columns: 1fr;

@@ -24,7 +24,6 @@ for (var i = 0; i < jogos.length; i++) {
 function abrirJogo(card) {
     var id = Number(card.getAttribute('data-id'));
 
-    // se já tinha um card aberto, fecha ele primeiro
     if (cardAberto !== null) {
         var infoAntiga = cardAberto.querySelector('.info-extra');
         if (infoAntiga !== null) {
@@ -34,14 +33,12 @@ function abrirJogo(card) {
 
         var idAntigo = Number(cardAberto.getAttribute('data-id'));
 
-        // se clicou de novo no mesmo card, só fecha e para por aqui
         if (idAntigo === id) {
             cardAberto = null;
             return;
         }
     }
 
-    // procura o jogo clicado dentro do array
     var jogo = null;
     for (var i = 0; i < jogos.length; i++) {
         if (jogos[i].id === id) {
