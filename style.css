@@ -29,13 +29,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 35px;
+    padding: 2px 35px;
     background-color: var(--cor-fundo-card);
     border-bottom: 4px solid var(--cor-principal);
 }
 
 .logo img {
-    height: 60px;
+    height: 100px;
     width: auto;
 }
 
