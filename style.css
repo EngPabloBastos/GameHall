@@ -10,12 +10,11 @@ body {
     color: #eaeaea;
 }
 
-/* CABEÇALHO */
+/* Cabeçalho, versão finalll */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< Updated upstream
     padding: 15px 35px;
     background-color: #141414;
     border-bottom: 4px solid #c0392b;
@@ -23,16 +22,6 @@ body {
 
 .logo img {
     height: 72px;
-=======
-    padding: 2px 35px;
-    background-color: #141414;
-    border-bottom: 4px solid #c0392b;
-}
-
-.logo img {
-    height: 90px;
-    width: auto;
->>>>>>> Stashed changes
 }
 
 .navegacao {
@@ -50,7 +39,7 @@ body {
     color: #c0392b;
 }
 
-/* TEXTO DE INTRODUÇÃO */
+/* Texto da pag inicial */
 .hero-texto {
     max-width: 700px;
     margin: 0 auto;
@@ -68,7 +57,7 @@ body {
     font-size: 16px;
 }
 
-/* LAYOUT PRINCIPAL */
+/* layout home */
 .container-principal {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -76,7 +65,7 @@ body {
     padding: 20px;
 }
 
-/* GRADE DE JOGOS */
+/* grade dos jogos */
 .lista-jogos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -150,12 +139,14 @@ body {
     color: #ccc;
 }
 
-/* MENU LATERAL */
+/* menu lateral (navigation)git add index.html style.css */
 .curiosidades {
-<<<<<<< Updated upstream
     background-color: #141414;
     padding: 20px;
     border-radius: 8px;
+    position: sticky;
+    top: 20px;
+    align-self: start;
 }
 
 .curiosidades h3 {
@@ -201,6 +192,12 @@ body {
     margin-bottom: 24px;
 }
 
+.lista-criticos,
+.lista-stats {
+    list-style: none;
+    padding-left: 0;
+}
+
 @media (max-width: 768px) {
     .container-principal {
         grid-template-columns: 1fr;
@@ -210,237 +207,4 @@ body {
         flex-direction: column;
         gap: 12px;
     }
-}
-
-.lista-criticos,
-.lista-stats {
-    list-style: none;
-    padding-left: 0;
-}
-
-.curiosidades {
-    background-color: #141414;
-    padding: 20px;
-    border-radius: 8px;
-    position: sticky;
-    top: 20px;
-    align-self: start;
-=======
-    background-color: #141414;
-    padding: 20px;
-    border-radius: 8px;
-    position: sticky;
-    top: 20px;
-    align-self: start;
-}
-
-.curiosidades h3 {
-    border-bottom: 2px solid #c0392b;
-    padding-bottom: 8px;
-    margin-bottom: 12px;
-    font-size: 17px;
-}
-
-.curiosidades h4 {
-    color: #fff;
-    font-size: 15px;
-    margin: 16px 0 8px;
-}
-
-.curiosidades p {
-    color: #ccc;
-    font-size: 14px;
-}
-
-.lista-criticos,
-.lista-stats {
-    list-style: none;
-    padding-left: 0;
-}
-
-.lista-criticos li {
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 6px;
-}
-
-.lista-stats li {
-    font-size: 14px;
-    color: #ccc;
-    border-bottom: 1px solid #2a2a2a;
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-}
-
-.lista-stats li span {
-    display: block;
-    color: #c0392b;
-    font-size: 12px;
-    margin-bottom: 3px;
-}
-
-.bloco-info {
-    margin-bottom: 24px;
-}
-
-/* FORMULÁRIO DE CONTATO */
-.contato {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.contato h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-.contato p {
-    color: #999;
-    margin-bottom: 20px;
-}
-
-.campo {
-    margin-bottom: 15px;
-}
-
-.campo label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #ccc;
-}
-
-.campo input,
-.campo textarea {
-    width: 100%;
-    padding: 8px;
-    background-color: #141414;
-    border: 1px solid #2a2a2a;
-    border-radius: 6px;
-    color: #eaeaea;
-    font-family: inherit;
-}
-
-.contato button {
-    background-color: #c0392b;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.contato button:hover {
-    background-color: #a3301f;
-}
-
-.confirmacao {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #050505;
-    justify-content: center;
-    align-items: center;
-}
-
-.confirmacao.visivel {
-    display: flex;
-}
-
-.confirmacao .caixa {
-    background-color: #141414;
-    border: 2px solid #c0392b;
-    border-radius: 8px;
-    padding: 30px;
-    text-align: center;
-    max-width: 350px;
-}
-
-.confirmacao h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.confirmacao p {
-    color: #999;
-    margin-bottom: 15px;
-}
-
-.confirmacao button {
-    background-color: #c0392b;
-    color: #fff;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* RODAPÉ */
-.rodape {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 35px;
-    border: 2px solid #c0392b;
-    border-radius: 8px;
-    margin: 20px;
-    color: #999;
-    font-size: 14px;
-}
-
-.rodape .redes {
-    display: flex;
-    gap: 15px;
-}
-
-.rodape .redes img {
-    width: 22px;
-    height: 22px;
-}
-
-/* PÁGINA SOBRE */
-.sobre {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.sobre h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-.sobre p {
-    color: #ccc;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.redes-sobre {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.redes-sobre img {
-    width: 26px;
-    height: 26px;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    .container-principal {
-        grid-template-columns: 1fr;
-    }
-
-    .cabecalho {
-        flex-direction: column;
-        gap: 12px;
-    }
->>>>>>> Stashed changes
 }
